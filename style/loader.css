@@ -1,9 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@
     height: 100vh;
 }
 
-.img{
+.img {
     width: 100px;
     height: 100px;
     animation: rotate 2s linear infinite;

@@ -7,7 +7,7 @@ const Password = document.getElementById("password")
 const Message = document.getElementById("message")
 
 const login = () => {
-    if(Email.value === "" || Password.value === "") {
+    if (Email.value === "" || Password.value === "") {
         Message.innerHTML = "Please fill all the fields."
         Message.style.color = "red"
     }
