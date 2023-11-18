@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../style/register.css">
+</html>
+<body>
+    <div class="main">
+        <div class="register-1">
+            <div class="register-2">
+                <h2>Sign Up</h2>
+            </div>
+            <div class="register-3">
+                <div class="register-title">
+                    <h4>First Name:</h4>
+                </div>
+                <input type="text" placeholder="First Name" class="input" name="first_name" id="first_name">
+            </div>
+            <div class="register-3">
+                <div class="register-title">
+                    <h4>Last Name:</h4>
+                </div>
+                <input type="text" placeholder="Last Name" class="input" name="last_name" id="last_name">
+            </div>
+            <div class="register-3">
+                <div class="register-title">
+                    <h4>Email Address:</h4>
+                </div>
+                <input type="email" placeholder="Email Address" class="input" name="email" id="email">
+            </div>
+            <div class="register-3">
+                <div class="register-title">
+                    <h4>Password:</h4>
+                </div>
+                <input type="password" placeholder="Password" class="input" name="password" id="password">
+            </div>
+            <div class="register-3">
+                <div class="register-title">
+                    <h4>Confirm Password:</h4>
+                </div>
+                <input type="password" placeholder="Confirm Password" class="input" name="confirm_password" id="confirm_password">
+            </div>
+            <p id="message"></p>
+            <div class="register-4">
+                <button id="register" onclick="signup()">Sign Up</button>
+            </div>
+            <div class="register-5">
+                <p>Already have an account?
+                    <span id="login" onclick="login()">Log In</span>
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="../js/register.js"></script>
+</body>
+</html>
