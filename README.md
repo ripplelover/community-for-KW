@@ -44,17 +44,17 @@
 
 
 **Team Roles & Development Areas**
-
-- Developer1(Minji): Handle the coding and development of the project.  
+- [Listing team members and their respective roles and responsibilities.]
+  - Developer1(Minji): Handle the coding and development of the project.  
   (사진이나 글 등의 게시물 업로드 기능 구현 예정)
 
-- Developer2(Dongkyu): Handle the coding and development of the project.  
+  - Developer2(Dongkyu): Handle the coding and development of the project.  
   (회원가입 및 로그인과 관련된 기능 구현 예정)
 
-- Developer3(Jungwoo): Handle the coding and development of the project.  
+  - Developer3(Jungwoo): Handle the coding and development of the project.  
   (커뮤니티 관리를 위한 관리자 기능 구현 예정) 
 
-- Designer(ALL): In charge of creating the user interface and design elements.
+  - Designer(ALL): In charge of creating the user interface and design elements.
 
 
 
