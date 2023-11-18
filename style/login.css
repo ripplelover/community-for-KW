@@ -64,9 +64,17 @@ input::placeholder{
     width: 100%;
 }
 #login{
-    width: 94%;
+    /* width: 94%;
     height: 25px;
     border-radius: 5px;
+    cursor: pointer; */
+    background-color: #1a73e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    width: 94%;
+    height: 30px;
+    font-weight: bold;
     cursor: pointer;
 }
 .login-5{
@@ -74,6 +82,9 @@ input::placeholder{
     justify-content: end;
     align-items: flex-end;
     width: 100%;
+    margin-bottom: 10px;
+}
+#message{
     margin-bottom: 10px;
 }
 h4{
