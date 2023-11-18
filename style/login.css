@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f3f5;
+}
+
+span{
+    font-weight: bold;
+    color: #1a73e8;
+}
+.login-1{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 410px;
+    padding: 15px;
+    margin-right: 20px;
+    max-width: 410px;
+    min-width: 200px;
+    min-height: 230px;
+}
+.login-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+.login-3{
+    margin-bottom: 15px;
+}
+input{
+    outline: none;
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    width: 94%;
+    font-weight: 200;
+    height: 30px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+input::placeholder{
+    color: #9da6ae;
+}
+.input{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.login-title{
+    margin-bottom: 2px;
+}
+.login-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#login{
+    width: 94%;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-5{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 10px;
+}
+h4{
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.login-6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#Signup{
+    cursor : pointer;
+}
