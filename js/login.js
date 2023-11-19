@@ -7,18 +7,35 @@ const Password = document.getElementById("password")
 const Message = document.getElementById("message")
 
 const login = () => {
-    if (Email.value === "" || Password.value === "") {
-        Message.innerHTML = "Please fill all the fields."
+    if (Email.value === "") {
+        Message.innerHTML = "Email address is required."
+        Message.style.color = "red"
+    }
+    else if (Password.value === "") {
+        Message.innerHTML = "Password is required."
         Message.style.color = "red"
     }
     else {
-        Message.innerHTML = "Login successful."
-        Message.style.color = "green"
         const userData = {
-            email: Email.value,
-            password: Password.value
-        }
-        console.log(userData)
+            Email: Email.value,
+            Password: Password.value
+        };
+        firebase.auth().signInWithEmailAndPassword(userData.Email, userData.Password).then((userCredential) => {
+            Message.innerHTML = "Login Success!"
+            Message.style.color = "green"
+            if (userCredential.user.emailVerified) {
+                window.location.assign("../Pages/home.html")
+            }
+            else {
+                window.location.assign("../Pages/emailVerification.html")
+            }
+        })
+            .catch((error) => {
+                Message.innerHTML = error.message;
+            });
     }
 
+}
+const ForgetPassword = () => {
+    window.location.assign("../Pages/ForgetPassword.html")
 }

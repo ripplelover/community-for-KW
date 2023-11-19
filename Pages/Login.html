@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="../style/login.css" />
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
         <button id="login" onclick="login()">Log In</button>
       </div>
       <div class="login-5">
-        <h4>Forgot Password</h4>
+        <h4 onclick="ForgetPassword()">Forgot Password</h4>
       </div>
       <div class="login-6">
         <p>Don't have an account?
@@ -39,7 +41,7 @@
         </p>
       </div>
     </div>
-
+    <script src="../js/firebase.js"></script>
     <script src="../js/login.js"></script>
 </body>
 
