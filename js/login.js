@@ -31,7 +31,9 @@ const login = () => {
             }
         })
             .catch((error) => {
-                Message.innerHTML = error.message;
+                //Message.innerHTML = error.message;
+                Message.innerHTML = "your id or password is not correct."
+                Message.style = "red"
             });
     }
 
