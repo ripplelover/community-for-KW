@@ -37,7 +37,7 @@
     - 웹 사이트 기능 구상, 추상화 및 역할분담 결정
     - 초기 웹 사이트에 필요한 기능 자료수집 및 취합
 
-  - Development (Week 11-13)
+  - Development (Week 11-15)
     - Write code using the required technologies.
     - 웹 사이트 내 기능 구현
 
