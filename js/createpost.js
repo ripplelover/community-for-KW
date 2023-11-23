@@ -1,87 +1,96 @@
-let postValue = document.getElementById("textarea");
-let progressdiv = document.getElementById("progressdiv");
-let progressbar = document.getElementById("progressbar");
-let currentUser= "";
+let postvalue = document.getElementById("textarea");
+var progressDiv = document.getElementById("progressdiv");
+var progressbar = document.getElementById("progressbar");
+let currentuser = "";
 let url = "";
 let fileType = "";
-let done = document.getElementById("done");
+var done = document.getElementById("done");
 let uid;
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        if (user.emailVerified) {
-            setTimeout(() => {
-                uid = user.uid;
-            }, 1000)
-        } else {
-            setTimeout(() => {
-                window.location.assign("../Pages/emailVerification.html");
-            }, 1000)
+        if (user.emailVerified) {      
+            uid = user.uid;
+        } else {    
+            window.location.assign("../Pages/emailVerification.html");
         }
     } else {
-        setTimeout(() => {
-            window.location.assign("../Pages/Login.html");
-        }, 1000)
+        window.location.assign("../Pages/Login.html");
     }
 });
 
+
 firebase.auth().onAuthStateChanged((user) => {
-    currentUser = user;
+    currentuser = user;
 });
 
 let uploadimg = (event) => {
-    fileType = event.target.files[0].fileType;
-    var uploadTask = firebase
+    fileType = event.target.files[0].type;
+    var uploadfile = firebase
     .storage()
     .ref()
-    .child(`posts/${event.target.files[0].name}`)
+    .child(`postFiles/${event.target.files[0].name}`)
     .put(event.target.files[0]);
-
-    uploadTask.on('state_changed', 
-    (snapshot) => {
-        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        var uploadpercentage = Math.round(progress);
-        progressdiv.style.display = "block";
-        progressbar.style.width = `${uploadpercentage}%`;
-        progressbar.innerHTML = `${uploadpercentage}%`;
-    }, 
-    (error) => {
-        // Handle unsuccessful uploads
-    }, 
-    () => {
-        uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-        url = downloadURL;
-        done.style.display = "block";
-        progressdiv.style.display = "none";
+    uploadfile.on(
+        "state_changed",
+        (snapshot) => {
+            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            var uploadpercentage = Math.round(progress);
+            console.log(uploadpercentage);
+            progressDiv.style.display = "block";
+            progressbar.style.width = `${uploadpercentage}%`;
+            progressbar.innerHTML = `${uploadpercentage}%`;
+        },
+        (error) => { },
+        () => {
+            uploadfile.snapshot.ref.getDownloadURL().then((downloadURL) => {
+            url = downloadURL;
+            done.style.display = "block";
+            progressDiv.style.display = "none";
         });
     }
     );
 };
+var d = new Date().toLocaleDateString();
 
 // store the data on firestore
 
-var d = new Date().toLocaleDateString();
-function createPost(){
-    if(postValue !== "" || url !== ""){
-        firebase.firestore().collection("posts").add({
-            postValue:postValue.ariaValueMax,
-            uid: currentUser.uid,
-            url:url,
-            fileType: fileType,
-            like: "",
-            dislike: "",
-            comment: "",
-            Date: `${d}`
-        }).then((res)=>{
-            firebase.firestore().collection("posts/").doc(res.id).update({
-                id:res.id
-            }).then(()=>{
-                done.style.display = none;
-                document.getElementById("uploadmessage").style.display = "block";
-                setTimeout(()=> {
-                    location.reload();
-                },2000)
-            })
+function createPost() {
+    if (postvalue.value !== "" || url !== "") {
+        firebase
+        .firestore()
+        .collection("posts")
+        .add({
+        postvalue: postvalue.value,
+        uid: currentuser.uid,
+        url: url,
+        filetype: fileType,
+        like: [],
+        dislikes: [],
+        comments: [],
+        Date: `${d}`
         })
+        .then((res) => {
+            firebase
+            .firestore()
+            .collection("posts/")
+            .doc(res.id)
+            .update({
+                id: res.id
+            })
+            .then(() => {
+                done.style.display = "none"
+                document.getElementById("uploadmessage").style.display = "block";
+                setTimeout(() => {
+                location.reload();
+                }, 2000);
+            });
+        });
     }
+}
+
+const logout = ()=>{
+    firebase.auth().signOut().then(() => {
+        window.location.assign("../Pages/login.js")
+    })
 }

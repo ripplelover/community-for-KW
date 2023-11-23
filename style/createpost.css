@@ -1,12 +1,12 @@
 *{
     padding: 0;
     margin: 0;
-
+    font-family: "Roboto", sans-serif;
 }
 
 textarea{
     outline: none;
-    border: 1px solid gray;
+    border: 1px solid gray !important;
 }
 
 .createmain{
@@ -57,7 +57,7 @@ textarea{
     width: 180px;
     padding: 5px 0px;
     border: none;
-    background: #3360f9;
+    background: royalblue;
     cursor: pointer;
     text-align: center;
     font-size: 15px;
@@ -66,12 +66,17 @@ textarea{
     color: white;
 }
 
+#createpostbtn:hover{
+    color: #fff;
+    background: black;
+}
+
 #textarea{
     font-size: 15px;
     outline: none;
     width: 100%;
     padding: 7px;
-    border: 2px solid rgba(225, 221, 221) !important;
+    border: 2px solid rgb(225, 221, 221) !important;
     border-radius: 10px;
     margin-bottom: 10px;
 }

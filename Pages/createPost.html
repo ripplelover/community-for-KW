@@ -46,12 +46,11 @@
                                 <i class="fa-solid fa-user icons"></i>
                             </a>
                         </li>
-                        <li class="lagouticon col-2">
-                            <i class="fa-solid fa-arrow-right-from-bracket icons"></i>
+                        <li class="logouticon col-2" onclick="logout()">
+                            <a><i class="fa-solid fa-arrow-right-from-bracket icons"></i></a>
                         </li>
-                    </div>
-                </div> 
-                <div class="createmain">
+                    </div> 
+                    <div class="createmain">
                     <p class="createposttitle">Create Post</p>
                     <textarea 
                         id="textarea" 
@@ -65,33 +64,35 @@
                             src="https://icon-library.com/images/save-icon-image/save-icon-image-25.jpg" 
                             alt=""
                             id="uploadbuttonicon"
-                        />
-                    </label>
-                    <input type="file" id="postfiles" style="visibility: hidden" onchange="uploadimg(event)" />
-                    <br />
-                    <div class="progress" id="progressdiv" style="display: none">
-                    <div 
-                        class="progress-bar" 
-                        role="progressbar"
-                        aria-valuenow="25"
-                        aria-valuemin="0" 
-                        aria-valuemax="100" 
-                        id="progressbar"
+                        /></label>
+                    <input 
+                        type="file" 
+                        id="postfiles" 
+                        style="visibility: hidden" 
+                        onchange="uploadimg(event)" 
+                        /><br><br>
+                    <div class="progress" id="progressdiv" style="display: none;">
+                        <div 
+                            class="progress-bar progress-bar-striped active" 
+                            role="progressbar"
+                            aria-valuenow="25"
+                            aria-valuemin="0" 
+                            aria-valuemax="100" 
+                            id="progressbar"
                         ></div> 
                     </div>      
-                    <p id="done" style="color: green; font-size: 15px; display: none"></p>
+                    <p id="done" style="color: green; font-size: 15px; display: none;"></p>
                     <div id="uploadmessage">
-                        <p style="color: green; font-size: 15px; display: none">Uploaded</p>
+                        <p style="color: green; font-size: 15px; text-align: center;">Uploaded</p>
                     </div>
-                    <div id="submitbutton" style="margin-top: 10px" class="col-12">
-                        <a id="createpostbtn" class="col-7" style="text-decoration: none"
+                    <div id="submitbutton" style="margin-top: 50px" class="col-12">
+                        <a id="createpostbtn" class="col-7" style="text-decoration: none;"
                         onclick="createPost()">Post</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- in the next video we add firebase queries to send data of post on firebase -->
-
+    </div>
         <script src="../js/firebase.js"></script>
         <script src="../js/createpost.js"></script>
 
