@@ -13,8 +13,8 @@
 
 #choosecoverimg{
     position: absolute;
-    right: 10px;
-    bottom: 35px;
+    right: 15px;
+    bottom: 45px;
 }
 
 #m{
@@ -46,7 +46,7 @@
 
 #chooseprofileimg {
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     left: 72px;
     cursor: pointer;
 }
