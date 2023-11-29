@@ -9,7 +9,7 @@
  * 6. 프로필 변경 및 기타 설정 기능 구현중  
 
 ### Project Schedule
-[Schedular]
+[Scheduler]
 <img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/113417378/8982e303-fca1-4e3f-af09-3c06af38f2c1">
 
 ### Project Screenshot
