@@ -46,4 +46,4 @@
 ### Jungwoo
 * 1. 회원별 프로필 기능 일부 구현 ([Commit Link](https://github.com/ripplelover/community-for-KW/commit/8d4dd75f894fca05dc1859df64d5af2e7694f284))  
 * 2. 게시글 올리는 기능 구현 ([Commit Link](https://github.com/ripplelover/community-for-KW/commit/8d4dd75f894fca05dc1859df64d5af2e7694f284))
-* 3. 프로젝트 스케줄 구현 ([Commit Link]())
+* 3. 프로젝트 스케줄 구현
