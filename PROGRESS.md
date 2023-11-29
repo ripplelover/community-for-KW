@@ -27,6 +27,9 @@ making
 [홈페이지 화면]
 <img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/8f6fb1cc-6fae-4cb2-9d3f-d5e63a26a45d">
 
+[게시글 업로드 화면]
+<img width="1243" alt="image" src="">
+
 [프로필 변경 화면]
 <img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/a05cd31d-2891-496e-ab95-3fb404712317">
 
