@@ -58,8 +58,8 @@ const signup = () => {
                     }, 2000)
                 })
             })
-            Message.innerHTML = "Sign up successful."
-            Message.style.color = "green"
+            messge.innerHTML = "Sign up successful."
+            messge.style.color = "green"
         })
             .catch((error) => {
                 Message.innerHTML = error.message;
