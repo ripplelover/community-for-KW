@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#profilemain{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42%; */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px; */
+}
+
+#usercoverpicture{
+    position: relative;
+}
+
+#choosecoverimg{
+    position: absolute;
+    right: 15px;
+    bottom: 45px;
+}
+
+#m{
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,
+    rgba(0,0,0,0.22) 0px 10px 10px;
+}
+
+#usercoverimg{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    max-height: 50vh;
+}
+
+#userprofilepicture{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+#userprofileimg {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+#chooseprofileimg {
+    position: absolute;
+    bottom: 40px;
+    left: 72px;
+    cursor: pointer;
+    visibility: visible;
+}
+
+#progressbardiv{
+    border-radius: 10px;
+    visibility: hidden;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+/*
+.progress {
+    margin-bottom: 10px;
+}
+
+#userdetail{
+    display: flex;
+    flex-direction: column;
+}
+*/
