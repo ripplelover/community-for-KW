@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,4 +34,41 @@
     <script src="../js/email.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/email.css">
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="verify-1">
+            <div class="verify-2">
+                <img src="../icons/free-icon-sent-5907904.png" alt="" width="70px">
+                <h5>Please Verify Your Email</h5>
+                <p id="para">You're almost there we send an email to <span id="emailid"></span></p>
+                <br>
+                <p>Just click on the link in the email to complete your signup.<br>If you don't seet it <span
+                        id="bold">check your inbox</span> folder</p>
+            </div>
+            <p id="message"></p>
+            <div class="buttons">
+                <button class="btn" onclick="resend()">Resend</button>
+                <button class="btn" onclick="reloud()">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/email.js"></script>
+</body>
+
+>>>>>>> 1e067f9220a5910710b890a5cf91272ddf038296
 </html>
