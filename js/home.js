@@ -15,26 +15,23 @@ firebase.auth().onAuthStateChanged((user) => {
 
                     if (users.data().uid === user.uid) {
                         createpostinput.setAttribute("placeholder",
-                            `${users.data().FirstName + " " + users.data().LastName} 님, 검색어를 입력해 주세요.`)
+                            users.data().firstName + users.data().lastName + ` 님, 검색어를 입력해 주세요.`)
                         if (users.data().ProfilePicture !== "") {
                             userimg.setAttribute("src", users.data().ProfilePicture)
                         }
                     }
                 })
             })
-        } else {
-            window.location.assign("../Pages/emailVerification.html")
         }
+        else { window.location.assign("../Pages/emailVerification.html") }
     }
-    else {
-        window.location.assign("../Pages/Login.html")
-    }
+    else { window.location.assign("../Pages/Login.html") }
 });
 
 var loading = document.getElementById("loaderdiv")
 var showposts = document.getElementById("showposts")
 
-firebase.firestore().collection("posts").onSnapshot((result) => {
+firebase.firestore().collection("posts/").onSnapshot((result) => {
     loading.style.display = "none";
     let allposts = [];
     if (result.size === 0) {
@@ -47,9 +44,10 @@ firebase.firestore().collection("posts").onSnapshot((result) => {
         showposts.style.display = "block"
         showposts.innerHTML = ""
         for (let i = 0; i < allposts.length; i++) {
-            let likearray = allposts[i].like;
-            let displayarray = allposts[i].dislike;
-            let commentarray = allposts[i].comments;
+
+            let likearray = allposts[i].like
+            let displayarray = allposts[i].dislike
+            let commentarray = allposts[i].comments
             let postmain = document.createElement("div");
             showposts.appendChild(postmain);
             postmain.setAttribute("class", "postmain");
@@ -60,7 +58,7 @@ firebase.firestore().collection("posts").onSnapshot((result) => {
             postheader.setAttribute("class", "postheader");
 
             //user data
-            firebase.firestore().collection("users").doc(allposts[i].uid).get().then((res) => {
+            firebase.firestore().collection("users/").doc(allposts[i].uid).get().then((res) => {
 
                 let userprodev = document.createElement("div");
 
@@ -81,26 +79,29 @@ firebase.firestore().collection("posts").onSnapshot((result) => {
 
                 let username = document.createElement("h6");
                 userdiv.appendChild(username);
-                username.innerHTML = `${res.data().FirstName} ${res.data().LastName}`
+                username.innerHTML = `${res.data().firstName} ${res.data().lastName}`
+
                 let date = document.createElement("h6");
                 userdiv.appendChild(date);
-                date.innerHTML = `${allposts[i].Date}`
-
+                date.innerHTML = `${allposts[i].Date}`;
+                //여기까지 확인.
                 let postdetail = document.createElement("p");
-                posttheader.appendChild(postdetail);
+                postheader.appendChild(postdetail); //변수명 수정.
                 postdetail.innerHTML = allposts[i].postvalue;
 
-                postdetail.setAttribute("class", "postdetail")
+                //postdetail.setAttribute("class", "postdetail")
 
                 if (allposts[i].url !== "") {
                     if (allposts[i].fileType === "image/png"
                         || allposts[i].fileType === "image/jpg"
                         || allposts[i].fileType === "image/jpeg") {
-                        let postimage = document.createElement("img")
-                        postmain.appendChild(postimage)
+                        //images
+                        let postimage = document.createElement("img");
+                        postmain.appendChild(postimage);
                         postimage.setAttribute("src", allposts[i].url);
                         postimage.setAttribute("class", "postimage col-12")
                     } else {
+                        //videos
                         let postvideo = document.createElement("video")
                         postmain.appendChild(postvideo)
                         postvideo.setAttribute("controls", true)
@@ -110,7 +111,6 @@ firebase.firestore().collection("posts").onSnapshot((result) => {
                         source.setAttribute("src", allposts[i].url)
                         source.setAttribute("Type", "video/mp4")
                     }
-
                 }
 
             })

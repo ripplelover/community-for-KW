@@ -38,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-top: 20px; */
 }
 
 #showposts {
@@ -47,14 +48,14 @@
 .postmain {
     background: white;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-bottom: 7px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.253) 3.95px 3.95px 3.6px;
 }
 
 #createpost {
-    width: 42%;
+    width: 100%;
     margin-top: 5px;
 }
 

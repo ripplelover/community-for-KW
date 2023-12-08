@@ -1,9 +1,9 @@
-* {
+*{
     padding: 0;
     margin: 0;
 }
 
-#profilemain {
+#profilemain{
     /* display: flex;
     justify-content: center;
     align-items: center;
@@ -16,24 +16,24 @@
     /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px; */
 }
 
-#usercoverpicture {
+#usercoverpicture{
     position: relative;
 }
 
-#choosecoverimg {
+#choosecoverimg{
     position: absolute;
-    right: 15px;
-    bottom: 45px;
+    right: 4px;
+    bottom: 35px;
 }
 
-#m {
+#m{
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0,0,0,0.25) 0px 14px 28px,
+    rgba(0,0,0,0.22) 0px 10px 10px;
 }
 
-#usercoverimg {
+#usercoverimg{
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -42,7 +42,7 @@
     max-height: 50vh;
 }
 
-#userprofilepicture {
+#userprofilepicture{
     position: absolute;
     bottom: 0;
     left: 10px;
@@ -63,7 +63,7 @@
     visibility: visible;
 }
 
-#progressbardiv {
+#progressbardiv{
     border-radius: 10px;
     visibility: hidden;
     margin-top: 3px;
@@ -74,6 +74,7 @@
 .progress {
     margin-bottom: 10px;
 }
+
 #userdetail{
     display: flex;
     flex-direction: column;

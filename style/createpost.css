@@ -1,15 +1,15 @@
-* {
+*{
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
 
-textarea {
+textarea{
     outline: none;
     border: 1px solid gray !important;
 }
 
-.createmain {
+.createmain{
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -18,12 +18,12 @@ textarea {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px;
 }
 
-.createposttitle {
+.createposttitle{
     font-size: 30px;
     font-weight: 600;
 }
 
-#imageforpost {
+#imageforpost{
     width: 100%;
     text-align: center;
     background: white;
@@ -34,26 +34,26 @@ textarea {
     color: black;
 }
 
-#imageforpost:hover {
+#imageforpost:hover{
     color: #fff;
     background: royalblue;
 }
 
 
-#uploadbuttonicon {
+#uploadbuttonicon{
     width: 35px;
 }
 
-#submitbutton {
+#submitbutton{
     display: flex;
     justify-content: flex-end;
 }
 
-.progress {
+.progress{
     width: 100%;
 }
 
-#createpostbtn {
+#createpostbtn{
     width: 180px;
     padding: 5px 0px;
     border: none;
@@ -66,12 +66,12 @@ textarea {
     color: white;
 }
 
-#createpostbtn:hover {
+#createpostbtn:hover{
     color: #fff;
     background: black;
 }
 
-#textarea {
+#textarea{
     font-size: 15px;
     outline: none;
     width: 100%;
@@ -85,12 +85,11 @@ p {
     margin-bottom: 0px !important;
 }
 
-@media screen and (max-width: 310px) {
-    #imageforpost {
+@media screen and (max-width: 310px){
+    #imageforpost{
         font-size: 4vw;
     }
-
-    #uploadbuttonicon {
+    #uploadbuttonicon{
         width: 15px;
     }
 }
