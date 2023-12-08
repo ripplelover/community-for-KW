@@ -40,7 +40,4 @@ const login = () => {
 }
 const ForgetPassword = () => {
     window.location.assign("../Pages/ForgetPassword.html")
-    var signup = () => {
-        window.location.assign("../Pages/Register.html")
-    }
 }
