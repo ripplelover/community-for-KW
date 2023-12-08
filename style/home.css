@@ -25,11 +25,95 @@
     width: 100%;
     font-size: 15px;
     height: 40px;
-    outline: none;
+    outline: none !important;
     border: none;
     border-radius: 20px;
     margin: 0px;
     padding: 15px;
     padding-left: 20px;
     margin-right: 10px;
+}
+
+#loaderdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showposts {
+    background: #f0f2f5;
+}
+
+.postmain {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.253) 3.95px 3.95px 3.6px;
+}
+
+#createpost {
+    width: 42%;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:1200pd) {
+    #createpost {
+        width: 100%;
+    }
+
+    .nav1 {
+        width: 100%;
+    }
+}
+
+.postheader {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.userprodev {
+    display: flex;
+    flex-direction: row;
+    /* width: 100% !important;
+    margin-left: -220px; */
+}
+
+.profileimage {
+    width: 50px;
+    height: 50px;
+    /* border-radius: 100%; */
+    border-radius: 50%;
+}
+
+.userprodev>div>h6 {
+    margin-top: 3px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.postdetail {
+    margin-left: -200px;
+    margin-top: 5px;
+}
+
+.postimage {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.userdiv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.postvideo {
+    width: 100%;
 }
