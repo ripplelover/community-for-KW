@@ -9,9 +9,9 @@ let uid;
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-        if (user.emailVerified) {      
+        if (user.emailVerified) {
             uid = user.uid;
-        } else {    
+        } else {
             window.location.assign("../Pages/emailVerification.html");
         }
     } else {
@@ -27,10 +27,10 @@ firebase.auth().onAuthStateChanged((user) => {
 let uploadimg = (event) => {
     fileType = event.target.files[0].type;
     var uploadfile = firebase
-    .storage()
-    .ref()
-    .child(`postFiles/${event.target.files[0].name}`)
-    .put(event.target.files[0]);
+        .storage()
+        .ref()
+        .child(`postFiles/${event.target.files[0].name}`)
+        .put(event.target.files[0]);
     uploadfile.on(
         "state_changed",
         (snapshot) => {
@@ -44,11 +44,11 @@ let uploadimg = (event) => {
         (error) => { },
         () => {
             uploadfile.snapshot.ref.getDownloadURL().then((downloadURL) => {
-            url = downloadURL;
-            done.style.display = "block";
-            progressDiv.style.display = "none";
-        });
-    }
+                url = downloadURL;
+                done.style.display = "block";
+                progressDiv.style.display = "none";
+            });
+        }
     );
 };
 var d = new Date().toLocaleDateString();
@@ -58,38 +58,38 @@ var d = new Date().toLocaleDateString();
 function createPost() {
     if (postvalue.value !== "" || url !== "") {
         firebase
-        .firestore()
-        .collection("posts")
-        .add({
-        postvalue: postvalue.value,
-        uid: currentuser.uid,
-        url: url,
-        filetype: fileType,
-        like: [],
-        dislikes: [],
-        comments: [],
-        Date: `${d}`
-        })
-        .then((res) => {
-            firebase
             .firestore()
-            .collection("posts/")
-            .doc(res.id)
-            .update({
-                id: res.id
+            .collection("posts")
+            .add({
+                postvalue: postvalue.value,
+                uid: currentuser.uid,
+                url: url,
+                filetype: fileType,
+                like: [],
+                dislikes: [],
+                comments: [],
+                Date: `${d}`
             })
-            .then(() => {
-                done.style.display = "none"
-                document.getElementById("uploadmessage").style.display = "block";
-                setTimeout(() => {
-                location.reload();
-                }, 2000);
+            .then((res) => {
+                firebase
+                    .firestore()
+                    .collection("posts/")
+                    .doc(res.id)
+                    .update({
+                        id: res.id
+                    })
+                    .then(() => {
+                        done.style.display = "none"
+                        document.getElementById("uploadmessage").style.display = "block";
+                        setTimeout(() => {
+                            location.reload();
+                        }, 2000);
+                    });
             });
-        });
     }
 }
 
-const logout = ()=>{
+const logout = () => {
     firebase.auth().signOut().then(() => {
         window.location.assign("../Pages/login.js")
     })

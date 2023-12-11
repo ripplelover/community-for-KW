@@ -1,37 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-.profilepicture {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-}
-
-/* .nav1 {
-    width: 42%;
-} */
-
-.inputfirst {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#a {
-    background: #f0f2f5;
-    width: 100%;
-    font-size: 15px;
-    height: 40px;
-    outline: none !important;
-    border: none;
-    border-radius: 20px;
-    margin: 0px;
-    padding: 15px;
-    padding-left: 20px;
-    margin-right: 10px;
+    font-family: "Roboto", sans-serif;
 }
 
 #loaderdiv {
@@ -41,80 +11,228 @@
     /* margin-top: 20px; */
 }
 
+
+.profilepicture {
+    height: 45px;
+    width: 45px;
+    /* border-radius: 50%; 이 코드를 추가할지 추후에 결정 */
+}
+
+#userimg {
+    border-radius: 100px;
+}
+
+.inputfirst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #showposts {
     background: #f0f2f5;
+
 }
 
-.postmain {
-    background: white;
-    display: flex;
-    /* flex-direction: column; */
-    margin-bottom: 7px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.253) 3.95px 3.95px 3.6px;
+#container {
+    padding-top: 20px;
+
 }
 
-#createpost {
+#a {
+    background-color: #f0f2f5;
     width: 100%;
-    margin-top: 5px;
+    font-size: 15px;
+    height: 40px;
+    outline: none !important;
+    border: none;
+    margin: 0px;
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+
 }
 
-@media screen and (max-width:1200pd) {
-    #createpost {
-        width: 100%;
-    }
+#a::placeholder {
+    color: gray;
 
-    .nav1 {
-        width: 100%;
-    }
 }
 
-.postheader {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-
-.userprodev {
-    display: flex;
-    flex-direction: row;
-    /* width: 100% !important;
-    margin-left: -220px; */
+.userprofile {
+    margin: 0px;
 }
 
 .profileimage {
     width: 50px;
     height: 50px;
-    /* border-radius: 100%; */
-    border-radius: 50%;
+    border-radius: 100px;
 }
 
-.userprodev>div>h6 {
+
+.postmain {
+    background-color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-bottom: 7px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.253) 3.95px 3.95px 3.6px;
+
+}
+
+.postheader {
+    padding: 10px;
+    /*width: 100%;
+    display: flex;
+    flex-direction: column;*/
+
+}
+
+.userprodiv {
+    display: flex;
+    flex-direction: row;
+    /* width: 100% !important;
+    margin-left: -220px; */
+
+}
+
+.userprodiv>div>h6 {
     margin-top: 3px;
     font-size: 15px;
     margin-left: 10px;
+
 }
+
+.postimage {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+
+}
+
+.footerdiv {
+    border-top: 1px solid rgb(206, 200, 200);
+    border-bottom: 1px solid rgb(206, 200, 200);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+p {
+    margin-bottom: 0px;
+
+}
+
+.footerdiv>button {
+    border: none;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    /* width: 200px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#createpostdiv {
+    padding: 0px !important;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 76%;
+    height: auto;
+    max-height: 74vh;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.postheader>p {
+    font-size: 14px;
+}
+
+/* 여기까지 확인했음 */
+#h1 {
+    font-weight: bolder;
+    padding: 20px;
+}
+
+video {
+    width: 100%;
+    height: 300px;
+}
+
+/* .postvideo {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+
+} */
+
+/* comment */
+.sendbutton {
+    width: 30px;
+    cursor: pointer;
+}
+
+.commentmain {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(228, 225, 225);
+}
+
+.commentprofileimage {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-right: 5px;
+}
+
+.commentmain>div {
+    background-color: #f4f5f7;
+    padding: 10px;
+    border-radius: 10px;
+    width: 85%;
+    margin-right: 10px;
+}
+
+.writecomment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.commentinput {
+    outline: none;
+    border: none;
+    width: 70%;
+    background: #f4f5f7;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 5px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+
+
 
 .postdetail {
     margin-left: -200px;
     margin-top: 5px;
 }
 
-.postimage {
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.userdiv {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}
-
-.postvideo {
-    width: 100%;
+.nav {
+    /* width: 42%; */
+    margin-top: 0px;
 }
