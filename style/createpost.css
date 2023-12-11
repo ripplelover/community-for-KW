@@ -13,9 +13,9 @@ textarea{
     background: white;
     padding: 20px;
     border-radius: 10px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 12px; */
 }
 
 .createposttitle{
@@ -39,6 +39,9 @@ textarea{
     background: royalblue;
 }
 
+#uploadmessage{
+    display : none;
+}
 
 #uploadbuttonicon{
     width: 35px;
