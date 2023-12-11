@@ -11,11 +11,11 @@ firebase.auth().onAuthStateChanged((user) => {
             firebase.firestore().collection("users/").onSnapshot((result) => {
                 result.forEach((users) => {
                     allusers.push(users.data())
-                    fileType = users.data().fileType;
+                    filetype = users.data().filetype;
 
                     if (users.data().uid === user.uid) {
                         createpostinput.setAttribute("placeholder",
-                            users.data().firstName + users.data().lastName + ` 님, 검색어를 입력해 주세요.`)
+                            users.data().firstName + users.data().lastName + ` 님, 반가워요! 새로운 글들을 확인해보세요!`)
                         if (users.data().ProfilePicture !== "") {
                             userimg.setAttribute("src", users.data().ProfilePicture)
                         }

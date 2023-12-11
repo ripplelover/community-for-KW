@@ -4,6 +4,7 @@ var login = () => {
 
 const FirstName = document.getElementById("first_name")
 const LastName = document.getElementById("last_name")
+const Major = document.getElementById("major")
 const Email = document.getElementById("email")
 const Password = document.getElementById("password")
 const ConfirmPassword = document.getElementById("confirm_password")
@@ -38,6 +39,7 @@ const signup = () => {
             var userData = {
                 firstName: FirstName.value,
                 lastName: LastName.value,
+                major: Major.value,
                 email: Email.value,
                 password: Password.value,
                 confirmPassword: ConfirmPassword.value,
