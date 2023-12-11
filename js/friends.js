@@ -112,4 +112,13 @@ firebase.auth().onAuthStateChanged((user) => {
 
     }
 
-});
+})
+
+const logout = () => {
+    firebase
+    .auth()
+    .signOut()
+    .then(() => {
+        window.location.assign("../Pages/Login.html");
+    });
+};
