@@ -71,13 +71,20 @@ firebase.auth().onAuthStateChanged((user) => {
 
                 usernamedetail.innerHTML = (`이름: ` + name);
 
+                var userhakbundetail =document.createElement("p")
+                userprofilediv.appendChild(userhakbundetail)
+                userhakbundetail.setAttribute("class","userhakbun")
+                userhakbundetail.style.fontSize = "15px"
+
+                userhakbundetail.innerHTML = (`학번: ` + userdetail.data().학번);
+
                 var usermajordetail =document.createElement("p")
                 userprofilediv.appendChild(usermajordetail)
                 usermajordetail.setAttribute("class","usermajor")
 
                 usermajordetail.innerHTML = (`학과: ` + userdetail.data().major);
                 // 폰트크기 조절
-                usermajordetail.style.fontSize = "14px"
+                usermajordetail.style.fontSize = "15px"
 
 
                 dropdownshow.addEventListener("click",()=>{

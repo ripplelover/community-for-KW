@@ -4,6 +4,7 @@ var login = () => {
 
 const FirstName = document.getElementById("first_name")
 const LastName = document.getElementById("last_name")
+const Hakbun = document.getElementById("hakbun")
 const Major = document.getElementById("major")
 const Email = document.getElementById("email")
 const Password = document.getElementById("password")
@@ -39,6 +40,7 @@ const signup = () => {
             var userData = {
                 firstName: FirstName.value,
                 lastName: LastName.value,
+                학번: Hakbun.value,
                 major: Major.value,
                 email: Email.value,
                 password: Password.value,
