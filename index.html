@@ -19,25 +19,52 @@
 </body>
 
 </html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect</title>
-    <!-- Include your CSS and Firebase scripts here if needed -->
-    <link rel="stylesheet" href="./style/loader.css">
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="../style/login.css" />
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
 </head>
 
 <body>
-    <!-- No loader-related code, just immediate redirection -->
-    <script>
-        window.location.href = "../Pages/Login.html";
-    </script>
+  <div class="main">
+    <div class="login-1">
+      <div class="login-2">
+        <h2>Login In</h2>
+      </div>
+      <div class="login-3">
+        <div class="login=title">
+          <h4>Email Address:</h4>
+        </div>
+        <input type="email" placeholder="Email Address" class="input" name="email" id="email" />
+      </div>
+      <div class="login-3">
+        <div class="login=title">
+          <h4>Password:</h4>
+        </div>
+        <input type="password" placeholder="Password" class="input" name="password" id="password" />
+      </div>
+      <p id="message"></p>
+      <div class="login-4">
+        <button id="login" onclick="login()">Log In</button>
+      </div>
+      <div class="login-5">
+        <h4 onclick="ForgetPassword()">Forgot Password</h4>
+      </div>
+      <div class="login-6">
+        <p>Don't have an account?
+          <span id="signup" onclick="signup()">Sign Up</span>
+        </p>
+      </div>
+    </div>
+    <script src="../js/firebase.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
-
