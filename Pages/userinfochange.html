@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User information change</title>
+    <link rel="stylesheet" href="../style/userinfochange.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="infochange-1">
+            <div class="infochange-2">
+                <h2>User information change</h2>
+            </div>
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h3>Email Address: <span id="user_email"></span>
+                    </h3>
+                </div>
+            </div>
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>현재 비밀번호:</h4>
+                </div>
+                <form>
+                    <input type="password" placeholder="현재 비밀번호 입력" class="input" name="current_password"
+                        id="current_password" autocomplete="on">
+                    <!-- <button id="reauth_button" onclick="reauthenticate()">비밀번호 확인</button> -->
+                </form>
+            </div>
+            <!-- <p id="reauth_message"></p> -->
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>First Name:</h4>
+                </div>
+                <input type="text" placeholder="First Name" class="input" name="first_name" id="first_name">
+            </div>
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>Last Name:</h4>
+                </div>
+                <input type="text" placeholder="Last Name" class="input" name="last_name" id="last_name">
+            </div>
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>학번:</h4>
+                </div>
+                <input type="text" placeholder="학번" class="input" name="hakbun" id="hakbun">
+            </div>
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>Major:</h4>
+                </div>
+                <input type="text" placeholder="Major" class="input" name="major" id="major">
+            </div>
+
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>Password to change:</h4>
+                </div>
+                <form>
+                    <input type="password" placeholder="Password to change" class="input" name="password" id="password"
+                        autocomplete="on">
+                </form>
+            </div>
+            <div class="infochange-3">
+                <div class="infochange-title">
+                    <h4>Password to change(confirm):</h4>
+                </div>
+                <form>
+                    <input type="password" placeholder="Confirm Password" class="input" name="confirm_password"
+                        id="confirm_password" autocomplete="on">
+                </form>
+            </div>
+            <p id="message"></p>
+            <div class="infochange-4">
+                <button id="infochange" onclick="changeinfo()">change information</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/firebase.js"></script>
+    <script src="../js/userinfochange.js"></script>
+</body>
+
+</html>
