@@ -158,7 +158,7 @@ firebase
 
             for (let likeIndex = 0; likeIndex < likearray.length; likeIndex++) {
               if (likearray[likeIndex] === uid) {
-                // 라이크어레이자체가 uid 모음
+                // likearray가 uid 모음
 
                 // .select의 클래스를 추가하는 식 생성
                 likeicon.classList.add("select");
@@ -171,12 +171,6 @@ firebase
 
             //this is like function
             likebutton.addEventListener("click", () => {
-              // uid = 고유 아이디,
-
-              // 고유아이디가 좋아요와 싫어요에 있다.
-
-              // 만약 싫어요를 눌렀을 때 고유아이디가 좋아요에 있다면 좋아요를 없애고 싫어요로 가자
-
               for (
                 let likeIndex = 0;
                 likeIndex < likearray.length;
@@ -204,7 +198,7 @@ firebase
                   like: likearray,
                 });
 
-              // 싫어요 로직을 추가
+              // dislike logic을 추가
               for (
                 let dislikeIndex = 0;
                 dislikeIndex < dislikearray.length;
@@ -217,7 +211,7 @@ firebase
                 }
               }
 
-              //  추가 로직
+              // 추가 로직
               if (!dislike) {
                 dislikearray.push(uid);
                 like = false;
@@ -231,7 +225,7 @@ firebase
                 });
             });
 
-            //dislike button (same as like button)
+            // dislike button (same as like button)
             var dislikebutton = document.createElement("button");
             footerdiv.appendChild(dislikebutton);
             dislikebutton.setAttribute("class", "dislikebutton");
@@ -273,7 +267,7 @@ firebase
                 }
               }
 
-              //  추가 로직
+              // 추가 로직
               if (!dislike) {
                 dislikearray.push(uid);
                 like = true;
@@ -285,7 +279,7 @@ firebase
                 .update({
                   dislikes: dislikearray,
                 });
-              // 좋아요 로직 추가
+              // like logic 추가
               for (
                 let likeIndex = 0;
                 likeIndex < likearray.length;
@@ -384,7 +378,7 @@ firebase
                 deleteButton.addEventListener("click", async (e) => {
                   // Firebase에서 해당 댓글 삭제
 
-                  // 클릭된 삭제 버튼이 속한 댓글 객체를 찾습니다.
+                  // 클릭된 삭제 버튼이 속한 댓글 객체를 찾음
                   const clickedComment = commentarray.find(
                     (comment) =>
                       comment.uid === uid &&
@@ -393,12 +387,12 @@ firebase
                   );
 
                   if (clickedComment) {
-                    // 로컬 배열에서 댓글을 제거합니다.
+                    // 로컬 배열에서 댓글을 제거
                     commentarray = commentarray.filter(
                       (comment) => comment !== clickedComment
                     );
 
-                    // Firebase 데이터베이스를 업데이트합니다.
+                    // Firebase database를 update
                     await firebase
                       .firestore()
                       .collection("posts")
@@ -407,7 +401,7 @@ firebase
                         comments: commentarray,
                       });
 
-                    // 해당 댓글을 표시하고 있는 HTML 요소를 제거합니다.
+                    // 해당 댓글을 표시하고 있는 HTML 요소를 제거
                     commentmain.remove();
                   } else {
                     console.log("클릭된 댓글을 찾을 수 없습니다.");
