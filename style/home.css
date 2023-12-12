@@ -1,168 +1,168 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background-color: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+  border-radius: 99px;
 }
 
 #loaderdiv {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20px; */
 }
 
-
 .profilepicture {
-    height: 45px;
-    width: 45px;
-    /* border-radius: 50%; 이 코드를 추가할지 추후에 결정 */
+  height: 45px;
+  width: 45px;
+  /* border-radius: 50%; 이 코드를 추가할지 추후에 결정 */
 }
 
 #userimg {
-    border-radius: 100px;
+  border-radius: 100px;
 }
 
 .inputfirst {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #showposts {
-    background: #f0f2f5;
-
+  background: #f0f2f5;
 }
 
 #container {
-    padding-top: 20px;
-
+  padding-top: 20px;
 }
 
 #a {
-    background-color: #f0f2f5;
-    width: 100%;
-    font-size: 15px;
-    height: 40px;
-    outline: none !important;
-    border: none;
-    margin: 0px;
-    padding: 15px;
-    padding-left: 20px;
-    border-radius: 20px;
-    margin-right: 10px;
-
+  background-color: #f0f2f5;
+  width: 100%;
+  font-size: 15px;
+  height: 40px;
+  outline: none !important;
+  border: none;
+  margin: 0px;
+  padding: 15px;
+  padding-left: 20px;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 
 #a::placeholder {
-    color: gray;
-
+  color: gray;
 }
 
 .userprofile {
-    margin: 0px;
+  margin: 0px;
 }
 
 .profileimage {
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
 }
 
-
 .postmain {
-    background-color: white;
-    /* display: flex; */
-    /* flex-direction: column; */
-    margin-bottom: 7px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.253) 3.95px 3.95px 3.6px;
-
+  background-color: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin-bottom: 7px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.253) 3.95px 3.95px 3.6px;
 }
 
 .postheader {
-    padding: 10px;
-    /*width: 100%;
+  padding: 10px;
+  /*width: 100%;
     display: flex;
     flex-direction: column;*/
-
 }
 
 .userprodiv {
-    display: flex;
-    flex-direction: row;
-    /* width: 100% !important;
+  display: flex;
+  flex-direction: row;
+  /* width: 100% !important;
     margin-left: -220px; */
-
 }
 
-.userprodiv>div>h6 {
-    margin-top: 3px;
-    font-size: 15px;
-    margin-left: 10px;
-
+.userprodiv > div > h6 {
+  margin-top: 3px;
+  font-size: 15px;
+  margin-left: 10px;
 }
 
 .postimage {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 5px;
-
+  width: 100%;
+  height: 300px;
+  margin-bottom: 5px;
 }
 
 .footerdiv {
-    border-top: 1px solid rgb(206, 200, 200);
-    border-bottom: 1px solid rgb(206, 200, 200);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  border-top: 1px solid rgb(206, 200, 200);
+  border-bottom: 1px solid rgb(206, 200, 200);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 p {
-    margin-bottom: 0px;
-
+  margin-bottom: 0px;
 }
 
-.footerdiv>button {
-    border: none;
-    padding: 10px;
-    background-color: rgb(255, 255, 255);
-    color: #000000;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    /* width: 200px; */
-    justify-content: space-between;
-    align-items: center;
+.footerdiv > button {
+  border: none;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  /* width: 200px; */
+  justify-content: space-between;
+  align-items: center;
 }
 
 #createpostdiv {
-    padding: 0px !important;
-    background-color: white;
-    outline: none;
-    border: none;
-    border-radius: 30px;
-    width: 100%;
-    font-size: 76%;
-    height: auto;
-    max-height: 74vh;
-    border-radius: 5px;
-    overflow: auto;
+  padding: 0px !important;
+  background-color: white;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 76%;
+  height: auto;
+  max-height: 74vh;
+  border-radius: 5px;
+  overflow: auto;
 }
 
-.postheader>p {
-    font-size: 14px;
+.postheader > p {
+  font-size: 14px;
 }
 
 /* 여기까지 확인했음 */
 #h1 {
-    font-weight: bolder;
-    padding: 20px;
+  font-weight: bolder;
+  padding: 20px;
 }
 
 video {
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
 }
 
 /* .postvideo {
@@ -174,65 +174,106 @@ video {
 
 /* comment */
 .sendbutton {
-    width: 30px;
-    cursor: pointer;
+  width: 30px;
+  cursor: pointer;
 }
 
 .commentmain {
-    padding: 5px 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid rgb(228, 225, 225);
+  position: relative;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(228, 225, 225);
 }
 
 .commentprofileimage {
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin-right: 5px;
 }
 
-.commentmain>div {
-    background-color: #f4f5f7;
-    padding: 10px;
-    border-radius: 10px;
-    width: 85%;
-    margin-right: 10px;
+.commentmain > div {
+  background-color: #f4f5f7;
+  padding: 10px;
+  border-radius: 10px;
+  width: 85%;
+  margin-right: 10px;
 }
 
 .writecomment {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 .commentinput {
-    outline: none;
-    border: none;
-    width: 70%;
-    background: #f4f5f7;
-    height: 40px;
-    border-radius: 20px;
-    margin-left: 5px;
-    font-size: 15px;
-    padding-left: 20px;
+  outline: none;
+  border: none;
+  width: 70%;
+  background: #f4f5f7;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 5px;
+  font-size: 15px;
+  padding-left: 20px;
 }
 
-
-
-
 .postdetail {
-    margin-left: -200px;
-    margin-top: 5px;
+  margin-left: -200px;
+  margin-top: 5px;
 }
 
 .nav {
-    /* width: 42%; */
-    margin-top: 0px;
+  /* width: 42%; */
+  margin-top: 0px;
+}
+
+.footerdiv > button:hover {
+  color: #fff;
+  background: royalblue;
+  transition: 0.3s;
+}
+
+/* 클래스 명을 추가 하여 선택 되었을 때의 css를 설정하기 */
+.select {
+  color: blue;
+}
+
+.dislikebutton:hover > .select {
+  color: white;
+}
+
+.likebutton:hover > .select {
+  color: white;
+}
+
+.deleteButton {
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 899px;
+  transition: 0.5s;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  border: none;
+}
+
+.deleteButton:hover {
+  background-color: #dddddd;
+}
+
+button:focus {
+  outline: none;
+  border: none;
 }
