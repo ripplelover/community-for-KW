@@ -322,6 +322,7 @@ firebase
             commentbtn.appendChild(commentmessage);
             commentmessage.setAttribute("class", "impressionstitle");
             commentmessage.innerHTML = `comment (${commentarray.length})`;
+
             // comment fuction
             if (commentarray.length !== 0) {
               for (
@@ -425,6 +426,21 @@ firebase
             );
             sendbutton.setAttribute("class", "sendbutton");
 
+            // 모든 commentmain 요소들 찾기
+            let commentmainElements = document.querySelectorAll(".commentmain");
+
+            // comment button 눌렀을 때 이벤트 리스너 추가
+            commentbtn.addEventListener("click", () => {
+                // commentmain 요소들의 가시성을 toggle
+                commentmainElements.forEach(commentmain => {
+                    if (commentmain.style.display === "none") {
+                        commentmain.style.display = "flex";
+                    } else {
+                        commentmain.style.display = "none";
+                    }
+                });
+            });
+
             //comment fuction
             sendbutton.addEventListener("click", () => {
               if (commentinput.value === "") {
@@ -436,14 +452,16 @@ firebase
                 };
                 commentarray.push(commentdata);
                 firebase
-                  .firestore()
-                  .collection("posts")
-                  .doc(allposts[i].id)
-                  .update({
-                    comments: commentarray,
-                  });
+                .firestore()
+                .collection("posts")
+                .doc(allposts[i].id)
+                .update({
+                  comments: commentarray,
+                });
+                
               }
             });
+
           });
       }
     }

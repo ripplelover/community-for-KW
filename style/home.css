@@ -181,7 +181,7 @@ video {
 .commentmain {
   position: relative;
   padding: 5px 10px;
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -277,3 +277,4 @@ button:focus {
   outline: none;
   border: none;
 }
+
