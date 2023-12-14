@@ -91,9 +91,50 @@ firebase
 
             userprofileimg.setAttribute("class", "profileimage");
             let userdiv = document.createElement("div"); //userprodev -> userprodiv
-            userprodiv.appendChild(userdiv);
 
+            let closediv = document.createElement("div");
+
+            userprodiv.appendChild(userdiv);
+            userprodiv.appendChild(closediv);
+
+            closediv.setAttribute("class", "closediv");
             userdiv.setAttribute("class", "userdiv");
+
+            // 삭제 버튼 클릭 이벤트 리스너 추가
+            closediv.addEventListener("click", async (e) => {
+              // createpost와 같은 매커니즘으로 id를 가져오기
+              firebase
+                .firestore()
+                .collection("posts")
+                .doc(allposts[i].id)
+                .get()
+                .then((doc) => {
+                  console.log(doc.data());
+                  // 글 삭제시 현재 사용자가 지우려는 내용의 작성자인지를 확인하고
+                  if (doc.data().uid === uid) {
+                    console.log(uid);
+                    console.log(allposts[i].postvalue);
+                    // 이후에 작성된 도큐먼트 아이디를 통해 작성 내용을 확인하고 같다면 지울 수 있도록 확인하여 제작
+                    if (allposts[i].postvalue === doc.data().postvalue) {
+                      if (confirm("정말 삭제하시겠습니까??") == true) {
+                        //확인
+                        firebase
+                          .firestore()
+                          .collection("posts")
+                          .doc(allposts[i].id)
+                          .delete();
+                      } else {
+                        //취소
+                        return false;
+                      }
+                    }
+                  } else {
+                    alert(
+                      "작성자가 아닙니다. 작성자일 경우 관리자에게 문의하십시오."
+                    );
+                  }
+                });
+            });
 
             let username = document.createElement("h6");
             userdiv.appendChild(username);
@@ -103,8 +144,21 @@ firebase
 
             let date = document.createElement("h6");
             userdiv.appendChild(date);
-            date.innerHTML = `${allposts[i].Date}`;
+            // id로 지정한 시간을 00분전 00시간전 으로 바꾸기 위해 유닉스시간을 모멘트 js를 이용하여 분전으로 변경
+            const before = moment
+              .unix(allposts[i].id / 1000)
+              .startOf("min")
+              .fromNow();
+
+            date.innerHTML = `${before}`;
+            console.log(
+              moment
+                .unix(allposts[i].id / 1000)
+                .startOf("min")
+                .fromNow()
+            );
             //여기까지 확인.
+
             let postdetail = document.createElement("p");
             postheader.appendChild(postdetail); //변수명 수정.
             postdetail.innerHTML = allposts[i].postvalue;
@@ -136,7 +190,7 @@ firebase
                 source.setAttribute("type", "video/mp4"); //Type-> type 수정
               }
             }
-
+            console.log(new Date().getTime());
             //footer
             let footerdiv = document.createElement("div");
             postmain.appendChild(footerdiv);
@@ -369,6 +423,7 @@ firebase
                 commentmessage.appendChild(commentvalue);
                 commentvalue.innerHTML =
                   commentarray[commentIndex].commentvalue;
+
                 // 삭제 버튼 추가
                 let deleteButton = document.createElement("button");
                 commentmain.appendChild(deleteButton);
@@ -431,14 +486,14 @@ firebase
 
             // comment button 눌렀을 때 이벤트 리스너 추가
             commentbtn.addEventListener("click", () => {
-                // commentmain 요소들의 가시성을 toggle
-                commentmainElements.forEach(commentmain => {
-                    if (commentmain.style.display === "none") {
-                        commentmain.style.display = "flex";
-                    } else {
-                        commentmain.style.display = "none";
-                    }
-                });
+              // commentmain 요소들의 가시성을 toggle
+              commentmainElements.forEach((commentmain) => {
+                if (commentmain.style.display === "none") {
+                  commentmain.style.display = "flex";
+                } else {
+                  commentmain.style.display = "none";
+                }
+              });
             });
 
             //comment fuction
@@ -452,16 +507,14 @@ firebase
                 };
                 commentarray.push(commentdata);
                 firebase
-                .firestore()
-                .collection("posts")
-                .doc(allposts[i].id)
-                .update({
-                  comments: commentarray,
-                });
-                
+                  .firestore()
+                  .collection("posts")
+                  .doc(allposts[i].id)
+                  .update({
+                    comments: commentarray,
+                  });
               }
             });
-
           });
       }
     }
