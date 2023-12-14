@@ -38,6 +38,21 @@
 [프로필 변경 화면]
 <img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/a05cd31d-2891-496e-ab95-3fb404712317">
 
+[업데이트한 홈페이지 화면]
+<img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/746aef0b-f58a-4259-9a8e-bd12f472822e">
+
+[업데이트한 홈페이지 화면]
+<img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/746aef0b-f58a-4259-9a8e-bd12f472822e">
+
+[업데이트한 사람 목록]
+<img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/a195b00d-a014-43bd-a1cd-913f3fbb9520">
+
+[업데이트한 비디오 화면]
+<img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/310b66db-8fa3-4450-abd9-9e4fc395ba4f">
+
+[업데이트한 프로필 화면]
+<img width="1243" alt="image" src="https://github.com/ripplelover/community-for-KW/assets/117145399/dab663aa-36e9-4017-9a18-6d9f4e0923ad">
+
 ## Individual Progress Status
 ### Dongkyu
 * 1. 회원가입 기능 구현 ([Commit Link](https://github.com/ripplelover/community-for-KW/commit/4eb2da0a2d6e05db2a06fd5ee7a53365765e8cef))  
