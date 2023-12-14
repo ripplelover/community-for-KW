@@ -127,9 +127,17 @@ firebase.firestore().collection("posts/").onSnapshot((result) => {
                 //this is like function
                 likebutton.addEventListener("click", () => {
                     let like = false;
-                    for (
-                        let likeIndex = 0; likeIndex < likearray.length; likeIndex++
-                    ) {
+                    let dislikeIndex = dislikearray.indexOf(uid);
+                
+                    if (dislikeIndex !== -1) {
+                        // User has already disliked, remove the dislike first
+                        dislikearray.splice(dislikeIndex, 1);
+                        firebase.firestore().collection("posts/").doc(allposts[i].id).update({
+                            dislikes: dislikearray,
+                        });
+                    }
+                
+                    for (let likeIndex = 0; likeIndex < likearray.length; likeIndex++) {
                         if (likearray[likeIndex] === uid) {
                             like = true;
                             likearray.splice(likeIndex, 1);
@@ -142,6 +150,7 @@ firebase.firestore().collection("posts/").onSnapshot((result) => {
                         like: likearray,
                     });
                 });
+                
 
                 //dislike button (same as like button)
                 var dislikebutton = document.createElement("button");
@@ -165,6 +174,16 @@ firebase.firestore().collection("posts/").onSnapshot((result) => {
                 //dislike button function
                 dislikebutton.addEventListener("click", () => {
                     let dislike = false;
+                    let likeIndex = likearray.indexOf(uid);
+                
+                    if (likeIndex !== -1) {
+                        // User has already liked, remove the like first
+                        likearray.splice(likeIndex, 1);
+                        firebase.firestore().collection("posts/").doc(allposts[i].id).update({
+                            like: likearray,
+                        });
+                    }
+                
                     for (let dislikeIndex = 0; dislikeIndex < dislikearray.length; dislikeIndex++) {
                         if (dislikearray[dislikeIndex] === uid) {
                             dislike = true;
@@ -239,6 +258,21 @@ firebase.firestore().collection("posts/").onSnapshot((result) => {
                 writecomment.appendChild(sendbutton);
                 sendbutton.setAttribute("src", "https://cdn-icons-png.flaticon.com/512/3682/3682321.png");
                 sendbutton.setAttribute("class", "sendbutton");
+
+            // 모든 commentmain 요소들 찾기
+            let commentmainElements = document.querySelectorAll(".commentmain");
+
+            // comment button 눌렀을 때 이벤트 리스너 추가
+            commentbtn.addEventListener("click", () => {
+              // commentmain 요소들의 가시성을 toggle
+              commentmainElements.forEach((commentmain) => {
+                if (commentmain.style.display === "none") {
+                  commentmain.style.display = "flex";
+                } else {
+                  commentmain.style.display = "none";
+                }
+              });
+            });
 
                 //comment fuction
                 sendbutton.addEventListener("click", () => {
